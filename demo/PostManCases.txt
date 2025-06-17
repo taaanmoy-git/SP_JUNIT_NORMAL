@@ -1,0 +1,33 @@
+🟢 2️⃣ Get Employee by ID
+URL:
+GET http://localhost:8080/employee/get/1
+
+🟢 3️⃣ Get Employee by Name
+URL:
+GET http://localhost:8080/employee/getByName/John Doe
+
+🟢 4️⃣ Get Employees by Age Range
+URL:
+GET http://localhost:8080/employee/getByAgeRange?age1=25&age2=40
+
+🟢 5️⃣ Create New Employee
+URL:
+POST http://localhost:8080/employee/create
+Headers:
+Content-Type: application/json
+
+🟢 6️⃣ Update Employee
+URL:
+PUT http://localhost:8080/employee/update/1
+Headers:
+Content-Type: application/json
+
+------------------------------------
+| Method | URL                                       | Notes                          |
+| ------ | ----------------------------------------- | ------------------------------ |
+| GET    | `/employee/test`                          | Health check                   |
+| GET    | `/employee/get/{id}`                      | Get by ID                      |
+| GET    | `/employee/getByName/{name}`              | Get by name                    |
+| GET    | `/employee/getByAgeRange?age1=xx&age2=yy` | Get employees within age range |
+| POST   | `/employee/create`                        | Create new employee            |
+| PUT    | `/employee/update/{id}`                   | Update employee by ID          |

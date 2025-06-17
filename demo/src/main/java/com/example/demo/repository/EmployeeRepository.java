@@ -15,15 +15,13 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findByName(String name);
 
-    @Query("SELECT e FROM Employee e WHERE e.age >= :age1 AND e.age <= :age2")
+    @Query("SELECT e FROM Employee e WHERE e.age BETWEEN :age1 AND :age2")
     List<Employee> findEmployeeByAgeBetween(
         @Param("age1") int age1,
         @Param("age2") int age2
     );
 
-    @Query("SELECT e FROM Employee e WHERE e.email = :email")
-    Optional<Employee> findByEmail(
-        @Param("email") String name
-    );
-
+    @Query("SELECT e FROM Employee e WHERE e.email = ?1")
+    Optional<Employee> findByEmail(String email);
 }
+
