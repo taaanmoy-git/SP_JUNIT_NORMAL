@@ -1,0 +1,15 @@
+CREATE DATABASE demo_db;
+
+USE demo_db;
+
+CREATE TABLE employee (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+INSERT INTO employee (name, age, email) VALUES
+('Alice', 30, 'alice@example.com'),
+('Bob', 45, 'bob@example.com'),
+('Charlie', 28, 'charlie@example.com');
